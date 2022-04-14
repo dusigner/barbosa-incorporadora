@@ -1,17 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbosa Incorporadora</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    @@include('./header.html')
-    <!-- Content -->
-    <section>
-      <h1>Hello world</h1>
-    </section>
-    @@include('./footer.html')
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barbosa Incorporadora</title>
+        <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml" sizes="any">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    </head>
+    <body>
+        <!-- Header -->
+        @@include('./_header.html')
+        <!-- Slider -->
+        @@include('./_slider.html')
+        <!-- Ours Enterprises -->
+        <section class="enterprises container">
+            <h1 class="enterprises__title">Nossos Empreendimentos</h1>
+            <div class="enterprises__slider">
+                <div class="enterprises__item">
+                    <picture class="relative overflow__hidden">
+                        <div class="ribbon">100% Vendido</div>
+                        <source srcset="webp/imgs/empreendimentos/empreendimentos-0001.webp" type="image/webp">
+                        <img src="imgs/empreendimentos/empreendimentos-0001.jpg" alt="Torre Corporativa Seattle" width="100%" height="auto">
+                        <legend>Torre Corporativa Seattle</legend>
+                    </picture>
+                </div>
+                <div class="enterprises__item">
+                    <picture class="relative overflow__hidden">
+                        <div class="ribbon">ÚLTIMAS UNIDADES</div>
+                         <source srcset="webp/imgs/empreendimentos/paris-slide-2-home-empreendimentos.webp" type="image/webp">
+                        <img src="imgs/empreendimentos/paris-slide-2-home-empreendimentos.jpg" alt="Paris" width="100%" height="auto">
+                        <legend>Paris</legend>
+                    </picture>
+                </div>
+                <div class="enterprises__item">
+                    <picture class="relative overflow__hidden">
+                        <div class="ribbon">ÚLTIMAS UNIDADES</div>
+                        <source srcset="webp/imgs/empreendimentos/empreendimentos-0003.webp" type="image/webp">
+                        <img src="imgs/empreendimentos/empreendimentos-0003.jpg" alt="New York Tower" width="100%" height="auto">
+                        <legend>New York Tower</legend>
+                    </picture>
+                </div>
+                <div class="enterprises__item">
+                    <picture class="relative overflow__hidden">
+                        <div class="ribbon">100% Vendido</div>
+                        <source srcset="webp/imgs/empreendimentos/empreendimentos-0004.webp" type="image/webp">
+                        <img src="imgs/empreendimentos/empreendimentos-0004.jpg" alt="Residencial Malibu" width="100%" height="auto">
+                        <legend>Residencial Malibu</legend>
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <!-- The company -->
+        <section class="company">
+            <div class="container">
+                <h2 class="company__title">A Empresa</h2>
+                <div class="company__col">
+                    <div class="company__col01 sm-col-12 md-col-7">
+                        <p>
+                            Fundada em 2017 fruto do ideal de dois irmãos empresários, Rafael e Renan Barbosa, 
+                            a Barbosa Incorporadora chegou ao mercado focada em fazer a diferença e se posicionar 
+                            entre as maiores do Brasil em pouco tempo.
+                        </p>
+                        <p>
+                            Desde o primeiro empreendimento tecnologias inovadoras e a valorização do design 
+                            arquitetônico estiveram em destaque e foram se tornando a referência da marca. 
+                            "A Barbosa nunca quis fazer mais do mesmo, sempre nos inspiramos em grandes projetos, 
+                            mas constituímos os nossos com uma identidade única" afirma Rafael Barbosa.
+                        </p>
+                        <p>
+                            Os três primeiros empreendimentos lançados tiveram uma aceitação excepcional, esgotando 
+                            as unidades em pouco tempo. Foram entregues antecipadamente ao prazo, se confirmando o 
+                            que sempre defendeu a BARBOSA. "Entregar antes do prazo é positivo para empresa, investidor 
+                            e morador, valorizando ainda mais os empreendimentos da marca" diz Renan Barbosa.
+                        </p>
+                        <p>
+                            No ano de 2020 foi lançado na cidade de Varginha um projeto totalmente inovador, atendendo 
+                            uma carência no segmento comercial, a Torre Corporativa Seattle. Um centro comercial de alto 
+                            luxo, espaçoso, seguro e sustentável, para consultórios, escritórios e unidades comerciais. 
+                            Sucesso de vendas absoluto o empreendimento viu suas unidades a venda esgotarem em pouco tempo 
+                            e uma alta procura.
+                        </p>
+                        <p>
+                            Já 2021 foi o ano do New York Tower, o maior empreendimento residencial de Minas Gerais com 33 
+                            pavimentos e mais de 120 milhões de reais em valor geral de vendas. O projeto foi lançado e a 
+                            empresa se posicionou entre as maiores do estado no setor, obtendo reconhecimento nacional e 
+                            uma grande visibilidade. Mais um sucesso com 70% das unidades vendidas dentro do primeiro ano e 
+                            uma execução extremamente eficiente recebendo elogios de pessoas e empresas renomadas no setor.
+                        </p>
+                        <p>
+                            O ano de 2022 já chegou trazendo mais um gigante, o Paris by Barbosa. Sempre focados no mercado 
+                            de alto luxo desta vez a Barbosa coloca sua expertise em compactos. Mais um empreendimento marcante, 
+                            se destacando por conforto, segurança e versatilidade.
+                        </p>
+                        <a href="empresa.html" class="btn__link">Saiba mais ></a>
+                    </div>
+                    <div class="company__col02 sm-col-12 md-col-5">
+                        <picture>
+                            <source srcset="webp/imgs/imagens-a-empresa.webp" type="image/webp">
+                            <img src="imgs/imagens-a-empresa.png" alt="A Empresa" width="574" height="548">
+                        </picture>
+                        <picture>
+                            <source srcset="webp/imgs/logo-barbosa-incorporadora-442x212.webp" type="image/webp">
+                            <img src="imgs/logo-barbosa-incorporadora-442x212.png" alt="Barbosa Incorporadora" width="442" height="212">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact us -->
+        @@include('./_formulario.html', {
+            "jpg": '<img src="imgs/fale-conosco-imagem-paris.png" alt="Fale Conosco" width="633" height="854" />',
+            "webp": "<source srcset='webp/imgs/fale-conosco-imagem-paris.webp' type='image/webp'>"
+        })
+        <section class="contact container mb-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14843.140048902986!2d-45.4466801!3d-21.5552601!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7bdf42cafe73961!2sBarbosa%20Incorporadora!5e0!3m2!1spt-BR!2sbr!4v1649689984554!5m2!1spt-BR!2sbr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>Localização</h3>
+            <address>
+                Rua Presidente Evaristo Soares, 187<br />
+                Vila Pinto | Varginha | MG<br />
+                CEP 37010-730
+            </address>
+        </section>
+        @@include('./_scripts-jquery.html')
+        @@include('./_scripts-menu.html')
+        @@include('./_scripts-slick.html')
+    </body>
 </html>
