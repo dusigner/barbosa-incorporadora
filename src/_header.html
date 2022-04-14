@@ -1,0 +1,31 @@
+
+<header class="menu desktop">
+    <section class="container">
+        <a href="./index.html" title="Barbosa Inciorporadora" class="logo">
+            <picture>
+                <source srcset="webp/imgs/logo-barbosa-incorporadora.webp" type="image/webp">
+                <img src="imgs/logo-barbosa-incorporadora.png" alt="Barbosa Inciorporadora">
+            </picture>
+        </a>
+        <nav class="menu__default btn-9">
+            @@include('./_menu-links.html')
+        </nav>
+        <nav class="menu__social">
+            @@include('./_menu-social.html')
+    </section>
+</header>
+
+<header class="menu mobile">
+    <a href="./index.html" title="Barbosa Inciorporadora" class="logo">
+        <picture>
+            <source srcset="webp/imgs/logo-barbosa-incorporadora.webp" type="image/webp">
+            <img src="imgs/logo-barbosa-incorporadora.png" alt="Barbosa Inciorporadora">
+        </picture>
+    </a>
+    <a href="#" class="menu__btn">
+        <span></span>
+    </a>
+    <nav class="menu__mobile">
+        @@include('./_menu-links.html')
+    </nav>
+</header>
