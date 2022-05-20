@@ -50,6 +50,7 @@ async function buildAndReload() {
 async function includeHTML(){
   return gulp.src([
     './src/*.html',
+    './src/**/*.html',
     '!./src/_formulario.html',
     '!./src/_header_secundary.html',
     '!./src/_header.html',
@@ -79,5 +80,5 @@ exports.default = async function() {
   });
   buildAndReload();
   watch('./src/sass/**/*.scss',  series(compileSass));
-  watch(["src/*.html","src/assets/**/*"], series(buildAndReload));
+  watch(["src/**/*.html","src/assets/**/*"], series(buildAndReload));
 };

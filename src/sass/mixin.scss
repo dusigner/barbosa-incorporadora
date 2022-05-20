@@ -4,7 +4,7 @@ $media_queries : (
     'desktop'   : "only screen and (min-width: (1025px))",
     'retina2'   : "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)",
     'retina3'   : "only screen and (-webkit-min-device-pixel-ratio: 3) and (min-resolution: 288dpi)",
-    'landscape' : "screen and (orientation:landscape) ",    
+    'landscape' : "screen and (orientation:landscape) ",
     'portrait'  : "screen and (orientation:portrait) "
 );
 
@@ -164,7 +164,7 @@ $large: 64em; //1024px
 }
 
 
-//padding, margin spacer vars 
+//padding, margin spacer vars
 $spacer: 16;
 $max: 10;
 $zero: 0px;
@@ -173,8 +173,12 @@ $two: unquote( ( $spacer * 0.5  ) + 'px' );
 $three: unquote( ( $spacer ) + 'px' );
 $four: unquote( ( $spacer * 1.5 ) + 'px' );
 $five: unquote( ( $spacer * 3 ) + 'px' );
+$six: unquote(($spacer * 4) + 'px');
+$seven: unquote(($spacer * 5) + 'px');
+$eight: unquote(($spacer * 6) + 'px');
+$nine: unquote(($spacer * 7) + 'px');
 
-$spaces: ($zero, $one, $two, $three, $four, $five); // Adjust this to include the pixel amounts you need.
+$spaces: ($zero, $one, $two, $three, $four, $five, $six, $seven, $eight, $nine); // Adjust this to include the pixel amounts you need.
 $sides: (x, y, all, top, bottom, left, right); // Leave this variable alone
 $i: 0;
 @each $space in $spaces {
