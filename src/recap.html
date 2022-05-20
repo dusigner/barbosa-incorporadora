@@ -1,0 +1,22 @@
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<body>
+    <div id="my_captcha_form" class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="correctCaptcha"></div>
+</body>
+
+<script type="text/javascript">
+    const url = "https://google.com"
+    const correctCaptcha = function (response) {
+        console.log(response)
+        if (response.length !== 0) {
+            function Redirect() {
+                window.open(url, '_blank').focus();
+            }
+        } else {
+            alert("Tente novamente");
+        }
+    };
+
+
+
+</script>
