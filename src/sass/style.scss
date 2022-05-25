@@ -71,11 +71,13 @@ header {
 }
 
 .list__order {
-  list-style: decimal;
-  list-style-position: inside;
-  font-weight: 500;
-  font-size: 24px;
+  &--dots {
+    list-style: disc inside;
+  }
+  list-style: decimal inside;
   li {
+    font-size: 20px;
+    font-weight: 500;
     margin-bottom: 15px;
   }
 }

@@ -51,8 +51,6 @@ async function includeHTML(){
   return gulp.src([
     './src/*.html',
     './src/**/*.html',
-    '!./src/_formulario.html',
-    '!./src/_header_secundary.html',
     '!./src/_header.html',
     '!./src/_menu-links.html',
     '!./src/_menu-social.html',

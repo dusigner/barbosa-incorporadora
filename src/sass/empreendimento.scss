@@ -1,0 +1,150 @@
+$yellow: #7F6700;
+$font_primary: 'Source Sans Pro', sans-serif;
+$font_secondary: 'Baskervville', serif;
+
+.empreendimento {
+    padding-top: 170px;
+    &__col {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    &__logo {
+        margin-bottom: 80px;
+        display: inline-flex;
+
+    }
+    &__text {
+        margin-bottom: 80px;
+        font-size: 20px;
+    }
+    &__title {
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 34px;
+    }
+    &__menu {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        line-height: 50px;
+        font-size: 0;
+        position: relative;
+        overflow: hidden;
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 0 30px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -.5px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: $yellow;
+        }
+        span.effect {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background-color: $yellow;
+            -webkit-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -o-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
+    &__content {
+        padding: 80px 80px 80px 160px;
+        &_title {
+            font-family: $font_secondary;
+            font-size: 60px;
+            text-transform: uppercase;
+            margin-bottom: 80px;
+            &::after {
+                content: '';
+                width: 30%;
+                height: 0.5px;
+                background: $yellow;
+                position: absolute;
+                display: block;
+                margin-top: 18px;
+                left: -174px;
+            }
+        }
+    }
+}
+
+.apartamentos {
+    &__title {
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+    &__list {
+        font-size: 20px;
+        padding-top: 30px;
+        list-style: disc inside;
+        margin-left: 80px;
+        li {
+            position: relative;
+            height: 50px;
+            padding: 38px 0;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                display: block;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                left: -60px;
+                position: absolute;
+            }
+            &::after {
+                content: '';
+                display: block;
+                height: 100%;
+                width: 1px;
+                background-color: $yellow;
+                left: -80px;
+                position: absolute;
+            }
+        }
+        &--icon-cama {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-cama.png');
+            }
+        }
+        &--icon-elevador {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-elevador.png');
+            }
+        }
+        &--icon-varanda {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-varanda.png');
+            }
+        }
+        &--icon-churrasqueira {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-churrasqueira.png');
+            }
+        }
+        &--icon-altopadrao {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-altopadrao.png');
+            }
+        }
+        &--icon-arcondicionado {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-arcondicionado.png');
+            }
+        }
+
+
+    }
+}
