@@ -3,16 +3,17 @@
 <link rel="stylesheet" type="text/css" href="@@webRoot/css/empreendimento.css">
 <!-- Header -->
 @@include('@@webRoot/_header.html')
-<section class="empreendimento">
+
+<section class="empreendimento container">
     <div class="row">
-        <div class="md-col-6">
+        <div class="sm-col-12 md-col-6">
             <picture>
                 <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-001.webp type="image/webp">
                 <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-001.jpg alt="Barbosa incorporadora - Empreendimento Paris"
                     width="100%" height="auto">
             </picture>
         </div>
-        <div class="md-col-6 empreendimento__col">
+        <div class="sm-col-12 md-col-6 empreendimento__col">
             <picture class="empreendimento__logo">
                 <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-logo.webp type="image/webp">
                 <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-logo.jpg
@@ -41,7 +42,7 @@
         </div>
     </div>
     <div class="row mt-6">
-        <div class="md-col-12">
+        <div class="sm-col-12 md-col-12">
             <picture>
                 <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-002.webp type="image/webp">
                 <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-002.jpg
@@ -50,8 +51,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="md-col-12">
-            <nav class="empreendimento__menu">
+        <div class="sm-col-12 md-col-12">
+            <div class="empreendimento__menu">
                 <a href="#" title="Apartamentos"><span>Apartamentos</span></a>
                 <a href="#" title="Lazer"><span>Lazer</span></a>
                 <a href="#" title="Diferenciais"><span>Diferenciais</span></a>
@@ -59,14 +60,14 @@
                 <a href="#" title="Conheça os detalhes"><span>Conheça os detalhes</span></a>
                 <a href="#" title="Mapa"><span>Mapa</span></a>
                 <a href="#" title="Estágio da obra"><span>Estágio da obra</span></a>
-            </nav>
+            </div>
         </div>
     </div>
     <div class="row empreendimento__content">
-        <div class="md-col-12">
+        <div class="sm-col-12 md-col-12">
             <h2 class="empreendimento__content_title">Apartamentos</h2>
             <div class="row apartamentos">
-                <div class="md-col-6">
+                <div class="sm-col-12 md-col-6">
                     <h4 class="apartamentos__title">Tipo 1</h4>
                     <ul class="apartamentos__list">
                         <li class="apartamentos__list--icon-cama">2 quartos (1 suíte master)</li>
@@ -77,7 +78,7 @@
                         <li class="apartamentos__list--icon-arcondicionado">Infraestrutura para ar condicionado</li>
                     </ul>
                 </div>
-                <div class="md-col-6">
+                <div class="sm-col-12 md-col-6">
                     <h4 class="apartamentos__title">Tipo 2</h4>
                     <ul class="apartamentos__list">
                         <li class="apartamentos__list--icon-cama">3 quartos (1 suíte master)</li>
@@ -91,11 +92,12 @@
             </div>
         </div>
     </div>
+
     <div class="row empreendimento__content">
-        <div class="md-col-12">
+        <div class="sm-col-12 md-col-12">
             <h2 class="empreendimento__content_title">Lazer</h2>
             <div class="row">
-                <div class="md-col-3">
+                <div class="sm-col-12 md-col-3">
                     <ul class="list__order list__order--dots">
                         <li>Salão de festas</li>
                         <li>Lobby social</li>
@@ -112,20 +114,138 @@
                         <li>Playground</li>
                     </ul>
                 </div>
-                <div class="md-col-9">
+                <div class="sm-col-12 md-col-9">
                     <div class="lazer__slider">
-                        <div class="lazer__slider-item">
-                            <picture class="empreendimento__logo">
-                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-001.webp type="image/webp">
+                        <div>
+                            <picture>
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-001.webp
+                                    type="image/webp">
                                 <img src=@@webRoot/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-001.jpg
                                     alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
                             </picture>
                         </div>
-                        <div class="lazer__slider-item">
-                            <picture class="empreendimento__logo">
-                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-001.webp
+                        <div>
+                            <picture>
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-002.webp
                                     type="image/webp">
-                                <img src=@@webRoot/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-001.jpg
+                                <img src=@@webRoot/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-002.jpg
+                                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-003.webp
+                                    type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-003.jpg
+                                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-004.webp
+                                    type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-004.jpg
+                                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                        <div>
+                            <picture>
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-005.webp
+                                    type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/lazer/empreendimentos-barbosa-paris-005.jpg
+                                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="sm-col-12 md-col-12">
+            <picture>
+                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-003.webp
+                    type="image/webp">
+                <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-003.jpg
+                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+            </picture>
+        </div>
+    </div>
+    <div class="row empreendimento__content">
+        <div class="sm-col-12 md-col-12">
+            <h2 class="empreendimento__content_title">Diferenciais</h2>
+            <div class="row">
+                <div class="sm-col-12 md-col-6">
+                    <ul class="list__order list__order--dots">
+                        <li>Arquitetura inspirada na Torre Eiffel</li>
+                        <li>Segurança</li>
+                        <li>Portaria 24h</li>
+                        <li>Elevadores econômicos</li>
+                        <li>Acessibilidade</li>
+                        <li>Paisagismo</li>
+                        <li>Localização privilegiada</li>
+                        <li>Lavanderia Express</li>
+                        <li>Elevador delivery</li>
+                        <li>Hall de entrada luxuoso</li>
+                        <li>Esquadria de alumínio em todo empreendimento</li>
+                        <li>Áreas comuns entregues acabadas e mobiliadas alto padrão</li>
+                        <li>Entrada de serviço independente</li>
+                        <li>Baixo custo de condomínio</li>
+                        <li>Garagem ampla e acessível</li>
+                    </ul>
+                </div>
+                <div class="sm-col-12 md-col-6">
+                    <div class="row">
+                        <div class="sm-col-6 md-col-6">
+                            <picture class="hover_img">
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-004.webp type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-004.jpg alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                        <div class="sm-col-6 md-col-6">
+                            <picture class="hover_img">
+                                <source srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-005.webp type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-005.jpg alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row empreendimento__content">
+        <div class="sm-col-12 md-col-12">
+            <h2 class="empreendimento__content_title">Plantas</h2>
+            <div class="row">
+                <div class="sm-col-12 md-col-12">
+                    <div class="lazer__slider">
+                        <div class="lazer__slider-item">
+                            <picture>
+                                <source
+                                    srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-planta-001.webp
+                                    type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-planta-001.png
+                                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                        <div class="lazer__slider-item">
+                            <picture>
+                                <source
+                                    srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-planta-002.webp
+                                    type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-planta-002.png
+                                    alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
+                            </picture>
+                        </div>
+                        <div class="lazer__slider-item">
+                            <picture>
+                                <source
+                                    srcset=@@webRoot/webp/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-planta-003.webp
+                                    type="image/webp">
+                                <img src=@@webRoot/imgs/empreendimentos/paris/empreendimentos-barbosa-paris-planta-003.png
                                     alt="Barbosa incorporadora - Empreendimento Paris" width="100%" height="auto">
                             </picture>
                         </div>
@@ -135,28 +255,83 @@
         </div>
     </div>
     <div class="row empreendimento__content">
-        <div class="md-col-12">
-            <h2 class="empreendimento__content_title">Diferenciais</h2>
-        </div>
-    </div>
-    <div class="row empreendimento__content">
-        <div class="md-col-12">
-            <h2 class="empreendimento__content_title">Plantas</h2>
-        </div>
-    </div>
-    <div class="row empreendimento__content">
-        <div class="md-col-12">
+        <div class="sm-col-12 md-col-12">
             <h2 class="empreendimento__content_title">Conheça os detalhes</h2>
+            <div class="row">
+                <div class="sm-col-12 md-col-12">
+                    <div class="video-container">
+                        <iframe
+                            width="100%"
+                            height="auto"
+                            src="https://www.youtube-nocookie.com/embed/cH30-4nsCgY?controls=0"
+                            title="Conheça os detalhes"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row empreendimento__content">
         <div class="md-col-12">
             <h2 class="empreendimento__content_title">Mapa</h2>
+            <div class="row">
+                <div class="sm-col-12 md-col-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.653319169929!2d-45.44040340000001!3d-21.560406999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca928555d5094f%3A0xa66f6c3e8c12414a!2sR.%20Profa.%20Helena%20R%C3%A9is%2C%20112%20-%20Centro%2C%20Varginha%20-%20MG%2C%2037006-030!5e0!3m2!1spt-BR!2sbr!4v1653610632528!5m2!1spt-BR!2sbr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="am-col-12 md-col-6">
+                    <p>
+                        <strong>Paris By Barbosa</strong>
+                        <br />
+                        Rua Professora Helena Reis, nº 112
+                        <br />
+                        Centro | Varginha | MG
+                        <br />
+                        CEP 37006-030
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row empreendimento__content">
-        <div class="md-col-12">
+        <div class="sm-col-12 md-col-12">
             <h2 class="empreendimento__content_title">Estágio da obra</h2>
+            <div class="row">
+                <div class="sm-col-12 md-col-12">
+                    <p class="text__center mb-5">
+                        Inicio das obras: maio/22<br />Prazo entrega: maio/25
+                    </p>
+                </div>
+                <div class="sm-col-6 md-col-6">
+                    <div class="progress">
+                        <div class="bar" style="width:100%">
+                            <p class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar" style="width:100%">
+                            <p class="percent">100%</p>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="bar" style="width:65%">
+                            <p class="percent">65%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sm-col-6 md-col-6">
+                    <p class="progress__info">
+                        Contenção + escavação<br />
+                        Fundação<br />
+                        Supra estrutura
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

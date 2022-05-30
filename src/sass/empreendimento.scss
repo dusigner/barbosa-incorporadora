@@ -1,17 +1,28 @@
+@import 'mixin.scss';
+
 $yellow: #7F6700;
 $font_primary: 'Source Sans Pro', sans-serif;
 $font_secondary: 'Baskervville', serif;
 
 .empreendimento {
     padding-top: 170px;
+    @include for_breakpoint(mobile) {
+        padding-top: 0px;
+    }
     &__col {
         padding-left: 80px;
         padding-right: 80px;
+        @include for_breakpoint(mobile) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
     &__logo {
         margin-bottom: 80px;
         display: inline-flex;
-
+        @include for_breakpoint(mobile) {
+            margin: 20px auto;
+        }
     }
     &__text {
         margin-bottom: 80px;
@@ -32,6 +43,9 @@ $font_secondary: 'Baskervville', serif;
         font-size: 0;
         position: relative;
         overflow: hidden;
+        @include for_breakpoint(mobile) {
+            display: none;
+        }
         a {
             position: relative;
             display: inline-block;
@@ -60,11 +74,19 @@ $font_secondary: 'Baskervville', serif;
     }
     &__content {
         padding: 80px 80px 80px 160px;
+        @include for_breakpoint(mobile) {
+            padding: 20px;
+        }
         &_title {
+            position: relative;
             font-family: $font_secondary;
             font-size: 60px;
             text-transform: uppercase;
             margin-bottom: 80px;
+            @include for_breakpoint(mobile) {
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
             &::after {
                 content: '';
                 width: 30%;
@@ -74,6 +96,9 @@ $font_secondary: 'Baskervville', serif;
                 display: block;
                 margin-top: 18px;
                 left: -174px;
+                @include for_breakpoint(mobile) {
+                    left: -55px;
+                }
             }
         }
     }
@@ -83,12 +108,20 @@ $font_secondary: 'Baskervville', serif;
     &__title {
         font-size: 40px;
         text-transform: uppercase;
+        @include for_breakpoint(mobile) {
+            font-size: 30px;
+        }
+
     }
     &__list {
         font-size: 20px;
         padding-top: 30px;
         list-style: disc inside;
         margin-left: 80px;
+        @include for_breakpoint(mobile) {
+            padding-top: 20px;
+            margin-bottom: 30px;
+        }
         li {
             position: relative;
             height: 50px;
@@ -144,7 +177,46 @@ $font_secondary: 'Baskervville', serif;
                 content: url('../imgs/empreendimentos/icons/icon-arcondicionado.png');
             }
         }
+        &--icon-sol {
+            &::before {
+                content: url('../imgs/empreendimentos/icons/icon-sol.png');
+            }
+        }
 
 
+    }
+}
+
+.lazer {
+    &__slider {
+        max-width: 83vw;
+        width: 100%;
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
+        .slick-prev,
+        .slick-next {
+            top: 104%;
+            z-index: 9;
+        }
+        .slick-dots {
+            li {
+                button {
+                    &::before {
+                        color: #fff;
+                    }
+                }
+            }
+            .slick-active {
+                button {
+                    &::before {
+                        color: #fff;
+                    }
+                }
+            }
+        }
     }
 }

@@ -16,6 +16,8 @@ $font_secondary: 'Baskervville', serif;
   }
 }
 .mobile {
+  display: flex;
+  justify-content: center;
   @include for_breakpoint(desktop) {
       display: none;
   }
@@ -70,7 +72,22 @@ header {
   float: right;
 }
 
+.hover_img {
+  display: block;
+  overflow: hidden;
+  img {
+      transform: scale(1);
+      transition: 0.3s ease-in-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+}
+
 .list__order {
+  line-height: 33px;
   &--dots {
     list-style: disc inside;
   }
@@ -118,6 +135,7 @@ header {
 ***/
 .menu {
   &.mobile {
+    position: relative;
     background-color: #fff;
     background-color: rgba(255,255,255,.0);
     box-shadow: 0 1px 0 rgba(0,0,0,.2);
@@ -125,7 +143,7 @@ header {
   &__btn {
     height: 30px;
     width: 30px;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 10px;
     z-index: 101;
@@ -187,6 +205,7 @@ header {
     transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: scale(0);
     &.act {
+      height: 100vh;
       opacity: 1;
       transform: scale(1);
       ul li {
@@ -308,7 +327,7 @@ header {
 }
 
 /***
-  SLIDER
+  SLIDER HOME
 ***/
 .slider {
   max-width: 1440px;
@@ -318,13 +337,24 @@ header {
   }
   &__item {
     padding-top: 146px;
+    @include for_breakpoint(mobile) {
+      padding-top: 0;
+    }
   }
   &__content {
     display: flex;
     align-items: center;
     gap: 50px;
+    @include for_breakpoint(mobile) {
+      flex-direction: column;
+    }
     picture {
       flex: none
+    }
+  }
+  &__infos {
+    @include for_breakpoint(mobile) {
+      padding: 0 35px;
     }
   }
   &__title {
@@ -332,6 +362,9 @@ header {
     color: #fff;
     font-family: $font_secondary;
     margin-bottom: 40px;
+    @include for_breakpoint(mobile) {
+      font-size: 40px;
+    }
   }
   &__description {
     max-width: 670px;
@@ -341,6 +374,9 @@ header {
     color: #fff;
     font-family: $font_primary;
     margin-bottom: 40px;
+    @include for_breakpoint(mobile) {
+      font-size: 16px;
+    }
   }
   &__button {
     font-family: $font_secondary;
@@ -350,10 +386,48 @@ header {
     border-radius: 13px;
     padding: 12px 60px;
     text-decoration: none;
+    @include for_breakpoint(mobile) {
+      font-size: 25px;
+      display: inline-block;
+    }
     &:hover {
       background-color: #B29447;
     }
   }
+}
+
+.progress {
+  margin: 20px auto;
+  padding: 0;
+  width: 90%;
+  height: 30px;
+  overflow: hidden;
+  background: #e5e5e5;
+  border-radius: 4px;
+  &__info {
+    line-height: 55px;
+    @include for_breakpoint(mobile) {
+      font-size: 17px !important;
+    }
+  }
+}
+
+.bar {
+  position: relative;
+  float: right;
+  min-width: 1%;
+  height: 100%;
+  background: $yellow;
+}
+
+.percent {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-15px, -50%);
+  margin: 0;
+  font-size: 12px;
+  color: white;
 }
 
 .video-container {
@@ -383,7 +457,7 @@ header {
   padding: 54px 0;
   &__title {
     @include for_breakpoint(mobile) {
-      font-size: 35px;
+      font-size: 28px;
     }
     font-size: 60px;
     text-align: center;
@@ -536,12 +610,18 @@ header {
   div {
     &:last-child {
       padding-left: 40px;
+      @include for_breakpoint(mobile) {
+        padding-left: 0px;
+      }
     }
     &:first-child {
       padding-right: 40px;
     }
     padding-left: 20px;
     padding-right: 20px;
+    @include for_breakpoint(mobile) {
+      padding: 0px;
+    }
   }
 }
 
@@ -568,10 +648,16 @@ header {
     &--right {
       margin-left: 35px;
       float: right;
+      @include for_breakpoint(mobile) {
+        margin: 0 auto;
+        float: unset;
+        display: flex;
+        justify-content: center;
+      }
     }
     @include for_breakpoint(mobile) {
       margin-right: 0;
-      padding: 0 35px;
+      padding: 0 0;
     }
     legend {
       font-size: 20px;
@@ -586,6 +672,12 @@ header {
   Fale Conosco
 **/
 .contact {
+  .social {
+    @include for_breakpoint(mobile) {
+      display: flex;
+      justify-content: center;
+    }
+  }
   &__title {
     @include for_breakpoint(mobile) {
       font-size: 35px;
@@ -597,92 +689,6 @@ header {
     font-family: $font_secondary;
     text-transform: uppercase;
   }
-
-
-
-  // img {
-  //   @include for_breakpoint(mobile) {
-  //     max-width: 100%;
-  //     height: auto;
-  //   }
-  // }
-  // &.container {
-  //   color: #fff;
-  //   padding: 0 96px 0 85px;
-  //   @include for_breakpoint(mobile) {
-  //     padding: 20px;
-  //   }
-  // }
-  // h3 {
-  //   font-weight: 300;
-  //   font-size: 30px;
-  // }
-  // &__title {
-  //   font-weight: 700;
-  //   font-size: 48px;
-  //   &::after {
-  //     content: '';
-  //     width: 100%;
-  //     height: 2px;
-  //     display: block;
-  //     background: rgba(250, 250, 250, 0.95);
-  //     margin-top: 21px;
-  //     margin-bottom: 25px;
-  //   }
-  // }
-  // &__col {
-  //   display: flex;
-  //   gap: 40px;
-  //   margin-bottom: 50px;
-  //   @include for_breakpoint(mobile) {
-  //     flex-direction: column;
-  //   }
-  // }
-  // &__form {
-  //   margin-top: 26px;
-  //   input, textarea {
-  //     border: none;
-  //     width: 80%;
-  //     background: #F1F0F0;
-  //     border-radius: 11px;
-  //     font-weight: 300;
-  //     font-size: 20px;
-  //     margin-bottom: 11px;
-  //     padding: 12px 18px;
-  //     @include for_breakpoint(mobile) {
-  //       width: 100%;
-  //     }
-  //   }
-  //   input[type="submit"]{
-  //     background: #AA9B6E;
-  //     border: 1px solid $yellow;
-  //     box-sizing: border-box;
-  //     border-radius: 29px;
-  //     &:hover {
-  //       background-color: #000;
-  //     }
-  //   }
-  // }
-  // &__social {
-  //   width: 50%;
-  //   display: flex;
-  //   margin-bottom: 150px;
-  //   padding-top: 30px;
-  //   justify-content: space-between;
-  //   @include for_breakpoint(mobile) {
-  //     width: 100%;
-  //     margin-bottom: 30px;
-  //   }
-  //   i {
-  //     font-size: 30px;
-  //   }
-  //   a {
-  //     color: #fff;
-  //     &:hover {
-  //       color: $yellow;
-  //     }
-  //   }
-  // }
 }
 
 .infos {
@@ -732,99 +738,15 @@ header {
   }
 }
 
-
-
-@keyframes tada {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-
-  2%,
-  8% {
-    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  }
-
-  3%,
-  5%,
-  10%,
-  11% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-
-  7%,
-  9%,
-  12% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-
-  13% {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-/***
- Pagina de empreendimentos
-***/
-.empreendimento {
-  p {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
-  }
-  &__infos {
-    display: flex;
-    align-items: center;
-    margin-bottom: 41px;
-    font-weight: 300;
-    font-size: 22px;
-    picture {
-      text-align: center;
-      width: 50px;
-      height: 50px;
-      margin-right: 22px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  &__reverse {
-    @include for_breakpoint(mobile) {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-  }
-}
-
-/***
- Header Secundário
-***/
-.header-secundary {
-  &__header {
-    @include for_breakpoint(mobile) {
-      position: unset;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-  }
-  &__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include for_breakpoint(mobile) {
-      position: unset;
-      top: unset;
-      left: unset;
-      transform: unset;
-    }
-  }
-}
-
 /***
   BLOG
 ***/
 .blog {
+  &.mt-6 {
+    @include for_breakpoint(mobile) {
+      margin: 0 !important;
+    }
+  }
   &__thumb {
     @include for_breakpoint(mobile) {
       padding: 0 35px;
@@ -864,5 +786,37 @@ header {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+/**
+ Animations
+ **/
+
+@keyframes tada {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  2%,
+  8% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  3%,
+  5%,
+  10%,
+  11% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  7%,
+  9%,
+  12% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  13% {
+    transform: scale3d(1, 1, 1);
   }
 }
