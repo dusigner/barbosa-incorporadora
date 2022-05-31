@@ -11,31 +11,9 @@
             }
     });
 
-    // Menu Empreendimento
-    window.addEventListener('load', function () {
-            var movingBar = new MovingBar('.empreendimento__menu');
-        });
-
-        function MovingBar(nav) {
-            var $navMovingBar = document.querySelector(nav),
-                $btnMenu11 = $navMovingBar.querySelectorAll('a'),
-                bar = document.createElement('span'),
-                width, left;
-
-            bar.classList.add('effect');
-            $navMovingBar.appendChild(bar);
-
-            for (var i = 0, max = $btnMenu11.length; i < max; i++) {
-                $btnMenu11[i].addEventListener('mouseenter', function () {
-                    width = this.offsetWidth,
-                        left = this.offsetLeft;
-                    barMovingCurrentMenu(width, left);
-                });
-            }
-
-            function barMovingCurrentMenu(width, left) {
-                bar.style.width = width + 'px';
-                bar.style.left = left + 'px';
-            }
-        }
+    $('.menu__mobile a').click(function () {
+           console.log('first')
+        $('.menu__mobile').removeClass('act');
+        $('.menu__btn').removeClass('act');
+    });
 </script>

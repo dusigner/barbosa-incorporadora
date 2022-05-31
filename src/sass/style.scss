@@ -7,6 +7,10 @@ $yellow: #7F6700;
 $font_primary: 'Source Sans Pro', sans-serif;;
 $font_secondary: 'Baskervville', serif;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /***
   DEFAULT
 ***/
@@ -47,7 +51,7 @@ body{
 
 header {
   font-family: $font_primary;
-  background: rgba(0, 0, 0, 0.50);
+  background: rgba(0, 0, 0, 0.80);
 }
 
 .container {
@@ -90,6 +94,7 @@ header {
   line-height: 33px;
   &--dots {
     list-style: disc inside;
+    list-style-position: outside;
   }
   list-style: decimal inside;
   li {
@@ -111,23 +116,6 @@ header {
   @include for_breakpoint(mobile) {
     padding: 0 20px;
   }
-}
-
-/***
-  Theme White
-***/
-.theme__white {
-  header {
-    background: white;
-  }
-  .menu {
-    &__default,
-    &__social {
-      a {
-        color: black;
-        }
-      }
-    }
 }
 
 /***
@@ -244,19 +232,21 @@ header {
     align-items: flex-end;
     justify-content: flex-start;
   }
+  /** Efects */
   &__default {
     height:50px;
     line-height:45px;
     font-size:0;
     a {
+      font-weight: 400;
+      text-transform: uppercase;
       position:relative;
       display:inline-block;
       padding:0 15px;
       color:#fff;
-      font-size:20px;
+      font-size:16px;
       letter-spacing: 0.1em;
       text-decoration:none;
-
       &::before,
       &::after {
         content:"";
@@ -291,6 +281,9 @@ header {
       }
 
       &:hover {
+        color: $yellow;
+        font-weight: 400;
+
         &::after {
           opacity:1;
           bottom:5px;
@@ -301,28 +294,27 @@ header {
         }
       }
     }
-  }
-
-  &__default {
     ul {
       display: flex;
     }
     li {
       list-style: none;
       margin: 0 5px;
-    }
-    a {
-      color: #FFFFFF;
-      font-size: 16px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-decoration: none;
+      ul {
+          display: none;
+          max-width: 200px;
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.80);
+        }
       &:hover {
-        color:$yellow;
+        ul {
+          display: flex;
+        }
       }
+
+
     }
   }
-
 
 }
 
@@ -672,10 +664,43 @@ header {
   Fale Conosco
 **/
 .contact {
-  .social {
+  &__social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    margin-top: 50px;
+    a {
+        width: 60px;
+        justify-self: center;
+    }
+  }
+  &__map {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+  &__social_title {
+    font-size: 21px;
+    text-align: center;
+  }
+  &__logo {
+    picture {
+      display: block;
+      margin-bottom: 100px;
+      margin-top: 80px;
+    }
     @include for_breakpoint(mobile) {
-      display: flex;
-      justify-content: center;
+        text-align: center;
+
+      }
+  }
+  &__selos {
+    text-align: center;
+    @include for_breakpoint(mobile) {
+      padding: 0 30px;
+    }
+    img {
+      max-width: 455px;
     }
   }
   &__title {
