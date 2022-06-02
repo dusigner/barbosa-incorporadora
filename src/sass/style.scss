@@ -223,6 +223,18 @@ header {
   MENU DESKTOP
 ***/
 .menu {
+  .submenu {
+    @include for_breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &.desktop {
+    .menu__logo {
+      max-width: 180px;
+      margin-right: 55px;
+    }
+  }
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -548,7 +560,10 @@ header {
   INSTITUCIONAL
 ***/
 .company {
-  padding: 69px 0;
+  padding: 69px 120px;
+  @include for_breakpoint(mobile) {
+    padding: 69px 0;
+  }
   &__title {
     @include for_breakpoint(mobile) {
       font-size: 35px;
@@ -686,17 +701,18 @@ header {
   &__logo {
     picture {
       display: block;
-      margin-bottom: 100px;
-      margin-top: 80px;
+      @include for_breakpoint(mobile) {
+        margin-bottom: 100px;
+        margin-top: 80px;
+      }
     }
     @include for_breakpoint(mobile) {
-        text-align: center;
-
-      }
+      text-align: center;
+    }
   }
   &__selos {
-    text-align: center;
     @include for_breakpoint(mobile) {
+      text-align: center;
       padding: 0 30px;
     }
     img {

@@ -3,12 +3,14 @@ Layout desenvolvido exclusivamente para a agência MoodCriativo. Todos os Direit
 
 ## Install the packages
 ```
-yarn
+Node 14.19.2
+
+npm i
 ```
 
 ## Run the gulp command
 ```
-yarn dev
+gulp
 ```
 
 ## Help Links
