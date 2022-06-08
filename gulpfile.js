@@ -7,6 +7,7 @@ const webp = require('gulp-webp');
 sass.compiler = require('node-sass');
 const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
+var strip = require('gulp-strip-comments');
 
 const paths = {
   scripts: {
@@ -63,6 +64,7 @@ async function includeHTML(){
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(strip())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(paths.scripts.dest));
 }
