@@ -1,4 +1,8 @@
+<script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js" ></script>
+<script src="https://unpkg.com/headroom.js@0.9.4/dist/jQuery.headroom.min.js"></script>
+
 <script>
+    $('.js-headroom').headroom();
     $('.menu__btn').click(function() {
         $(this).toggleClass('act');
             if($(this).hasClass('act')) {
@@ -17,3 +21,5 @@
         $('.menu__btn').removeClass('act');
     });
 </script>
+
+
