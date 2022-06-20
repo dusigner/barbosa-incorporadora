@@ -227,9 +227,9 @@ header {
       opacity: 1;
       transform: scale(1);
       ul li {
-      opacity: 1;
-      transform: translateX(0);
-    }
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
     ul {
       display: table-cell;
@@ -244,6 +244,13 @@ header {
       color: $yellow;
       display: inline-block;
       font-size: 18px;
+    }
+    .submenu {
+      ul {
+        display: none;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
     }
 
   }
@@ -344,6 +351,7 @@ header {
       margin: 0 5px;
       ul {
           display: none;
+          position: absolute;
           max-width: 200px;
           flex-direction: column;
           background: rgba(0, 0, 0, 0.80);
@@ -582,6 +590,18 @@ header {
           font-size: 13px;
         }
       }
+    }
+  }
+}
+
+.share {
+  padding: 0 120px 120px 120px;
+  &__social {
+    display: flex;
+    align-items: center;
+    a {
+      margin: 0 10px;
+      cursor: pointer;
     }
   }
 }

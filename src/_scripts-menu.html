@@ -5,18 +5,22 @@
     $('.js-headroom').headroom();
     $('.menu__btn').click(function() {
         $(this).toggleClass('act');
-            if($(this).hasClass('act')) {
-                $('.menu__mobile').addClass('act');
-                $('body').addClass('overflow__hidden');
-            }
-            else {
-                $('.menu__mobile').removeClass('act');
-                $('body').removeClass('overflow__hidden');
-            }
+        if($(this).hasClass('act')) {
+            $('.menu__mobile').addClass('act');
+            $('body').addClass('overflow__hidden');
+        }
+        else {
+            $('.menu__mobile').removeClass('act');
+            $('body').removeClass('overflow__hidden');
+        }
     });
 
-    $('.menu__mobile a').click(function () {
-           console.log('first')
+    $('.menu__mobile a').click(function (event) {
+        if($(this).hasClass("menuClick")){
+            event.preventDefault();
+            $(this).next().toggle();
+            return;
+        }
         $('.menu__mobile').removeClass('act');
         $('.menu__btn').removeClass('act');
     });
